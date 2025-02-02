@@ -2,6 +2,8 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 const bodyParser = require("body-parser");
+require('dotenv').config()
+const PORT = process.env.PORT
 
 const app = express();
 const server = http.createServer(app);
