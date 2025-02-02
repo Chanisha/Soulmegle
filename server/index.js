@@ -2,14 +2,13 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 const bodyParser = require("body-parser");
-require('dotenv').config()
-const PORT = process.env.PORT
+
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://192.168.1.9:3000",
+        origin: "http://localhost:3000",
         methods: ["GET", "POST"]
     }
 });

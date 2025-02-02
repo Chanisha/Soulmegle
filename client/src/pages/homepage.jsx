@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://192.168.1.9:8000");
+const socket = io("http://localhost:8000");
 
 const Home = () => {
     const [selectedInterests, setSelectedInterests] = useState([]);
